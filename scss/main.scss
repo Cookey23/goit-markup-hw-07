@@ -1,22 +1,27 @@
 //UTILS
-@import "./utils/variables";
-@import "./utils/visually-hidden";
+@import './utils/variables';
+@import './utils/visually-hidden';
 
 //BASE
-@import "./base/common";
+@import './base/common';
 
 //COMPONENTS
-@import "./components/container";
-@import "./components/section";
-@import "./components/modal-btn";
-@import "./components/social-links";
-@import "./components/backdrop";
-@import "./components/modal";
-@import "./components/modal-form";
+@import './components/container';
+@import './components/section';
+@import './components/section-title';
+@import './components/logo';
+@import './components/modal-btn';
+@import './components/social-links';
+@import './components/backdrop';
+@import './components/modal';
+@import './components/modal-form';
 
 //LAYOUT
-@import "./layout/header";
-@import "./layout/hero";
-@import "./layout/about";
-@import "./layout/contact";
-@import "./layout/footer";
+@import './layout/header';
+@import './layout/hero';
+@import './layout/advantage';
+@import './layout/works-type';
+@import './layout/team';
+@import './layout/footer';
+@import './layout/partners';
+@import './layout/portfolio';
