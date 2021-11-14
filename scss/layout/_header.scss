@@ -3,28 +3,21 @@
 }
 
 /* site nav */
-.main-nav,
-.site-nav-full {
+
+.header-nav {
   display: flex;
   align-items: center;
 }
 
-.site-nav {
+.site-nav__list {
   display: flex;
   margin-left: 93px;
 }
 
-.site-nav .item:not(:last-child) {
+.site-nav__item:not(:last-child) {
   margin-right: 50px;
 }
-.header-contact {
-  display: flex;
-  margin-left: auto;
-}
-.header-contact .item + .item {
-  margin-left: 50px;
-}
-.site-nav .link {
+.site-nav__link {
   position: relative;
   display: block;
   padding-top: 32px;
@@ -41,7 +34,7 @@
     color: var(--accent-color);
   }
 }
-.site-nav .link.current::after {
+.site-nav__link.current::after {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -52,8 +45,15 @@
   background-color: var(--accent-color);
   border-radius: 2px;
 }
+.header-contacts {
+  display: flex;
+  margin-left: auto;
+}
+.header-contacts__item + .header-contacts__item {
+  margin-left: 50px;
+}
 
-.header-contact .contacts {
+.header-contacts__link {
   display: flex;
   align-items: center;
   padding-top: 32px;
@@ -69,15 +69,13 @@
     color: var(--accent-color);
   }
 }
-.header-contact .contact-icon {
+.header-contacts__icon {
   margin-right: 10px;
   width: 16px;
   height: 16px;
   fill: var(--primary-text-color);
   transition: fill 250ms var(--primary-cubic);
-}
-
-.header-contact .contacts:hover .contact-icon,
-.header-contact .contacts:focus .contact-icon {
-  fill: var(--accent-color);
+  .header-contacts__link:hover & {
+    fill: var(--accent-color);
+  }
 }

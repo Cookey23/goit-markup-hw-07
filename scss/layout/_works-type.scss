@@ -1,16 +1,16 @@
-.section-works-type {
+.section-works {
   padding-top: 0;
 }
-.works-type {
+.works-list {
   display: flex;
 }
-.works-type .item {
+.works-list__item {
   position: relative;
   &:not(:last-child) {
     margin-right: 30px;
   }
 }
-.works-type .overlay {
+.works-list__overlay {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -22,7 +22,7 @@
 
   background-color: rgba(47, 48, 58, 0.8);
 }
-.works-type-description {
+.works-list__description {
   text-transform: uppercase;
   font-weight: bold;
   font-size: 14px;
@@ -30,7 +30,6 @@
   letter-spacing: 0.03em;
   color: var(--primary-bg-color);
 }
-
-.works-type .image {
+.works-list__image {
   display: block;
 }
