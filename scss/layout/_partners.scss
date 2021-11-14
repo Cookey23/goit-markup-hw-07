@@ -11,6 +11,10 @@
   border: 1px solid #afb1b8;
   border-radius: 4px;
   transition: border-color 250ms var(--primary-cubic);
+  &:hover,
+  &:focus {
+    border-color: var(--accent-color);
+  }
 }
 .partners-list .item:not(:last-child) {
   margin-right: 30px;
@@ -21,10 +25,7 @@
   fill: #afb1b8;
   transition: fill 250ms var(--primary-cubic);
 }
-.partners-list .link:hover,
-.partners-list .link:focus {
-  border-color: var(--accent-color);
-}
+
 .partners-list .link:hover .company-icon,
 .partners-list .link:focus .company-icon {
   fill: var(--accent-color);

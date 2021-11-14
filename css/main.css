@@ -87,12 +87,12 @@ p {
   color: var(--primary-bg-color);
 }
 
-.team .social-list {
+.social-list {
   display: flex;
   justify-content: center;
 }
 
-.team .social-link {
+.social-list__link {
   width: 44px;
   height: 44px;
   display: flex;
@@ -102,24 +102,23 @@ p {
   transition: background-color 250ms var(--primary-cubic);
 }
 
-.team .social-item:not(:last-child) {
+.social-list__link:hover, .social-list__link:focus {
+  background-color: var(--accent-color);
+}
+
+.social-list__item:not(:last-child) {
   margin-right: 10px;
 }
 
-.team .social-icon {
+.social-list__icon {
   width: 20px;
   height: 20px;
   fill: #afb1b8;
   transition: fill 250ms var(--primary-cubic);
 }
 
-.team .social-link:hover,
-.team .social-link:focus {
-  background-color: var(--accent-color);
-}
-
-.team .social-link:hover .social-icon,
-.team .social-link:focus .social-icon {
+.social-list__link:hover .social-list__icon,
+.social-list__link:focus .social-list__icon {
   fill: var(--primary-bg-color);
 }
 
@@ -324,6 +323,10 @@ p {
   transition: color 250ms var(--primary-cubic);
 }
 
+.site-nav .link:hover, .site-nav .link:focus {
+  color: var(--accent-color);
+}
+
 .site-nav .link.current::after {
   position: absolute;
   bottom: 0;
@@ -334,15 +337,6 @@ p {
   height: 4px;
   background-color: var(--accent-color);
   border-radius: 2px;
-}
-
-.site-nav .link:hover,
-.site-nav .link:focus {
-  color: var(--accent-color);
-}
-
-.site-nav .link.current {
-  color: var(--accent-color);
 }
 
 .header-contact .contacts {
@@ -358,17 +352,16 @@ p {
   transition: color 250ms var(--primary-cubic);
 }
 
+.header-contact .contacts:hover, .header-contact .contacts:focus {
+  color: var(--accent-color);
+}
+
 .header-contact .contact-icon {
   margin-right: 10px;
   width: 16px;
   height: 16px;
   fill: var(--primary-text-color);
   transition: fill 250ms var(--primary-cubic);
-}
-
-.header-contact .contacts:hover,
-.header-contact .contacts:focus {
-  color: var(--accent-color);
 }
 
 .header-contact .contacts:hover .contact-icon,
@@ -418,8 +411,7 @@ p {
   transition: color 250ms var(--primary-cubic), background-color 250ms var(--primary-cubic);
 }
 
-.hero-button:hover,
-.hero-button:focus {
+.hero-button:hover, .hero-button:focus {
   color: var(--accent-color);
   background-color: var(--primary-bg-color);
 }
@@ -473,6 +465,10 @@ p {
   position: relative;
 }
 
+.works-type .item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .works-type .overlay {
   position: absolute;
   bottom: 0;
@@ -494,19 +490,23 @@ p {
   color: var(--primary-bg-color);
 }
 
-.works-type .item:not(:last-child) {
-  margin-right: 30px;
-}
-
 .works-type .image {
   display: block;
 }
 
-.team {
+.section-team {
+  background-color: #f5f4fa;
+}
+
+.team-list {
   display: flex;
 }
 
-.team .item {
+.team-list__team-card:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-card {
   text-align: center;
   padding-bottom: 30px;
   width: calc((100%-90px) / 4);
@@ -515,20 +515,12 @@ p {
   background-color: #fff;
 }
 
-.team .item:not(:last-child) {
-  margin-right: 30px;
-}
-
-.section-team {
-  background-color: #f5f4fa;
-}
-
-.team .photo {
+.team-card__photo {
   margin-bottom: 30px;
   display: block;
 }
 
-.team .title {
+.team-card__title {
   margin-top: 0;
   margin-bottom: 10px;
   font-weight: 500;
@@ -537,7 +529,7 @@ p {
   color: var(--title-text-color);
 }
 
-.team .text {
+.team-card__text {
   font-size: 16px;
   line-height: 1.18;
   margin-bottom: 16px;
@@ -586,13 +578,12 @@ p {
   transition: color 250ms var(--primary-cubic);
 }
 
-.address .street {
-  color: var(--primary-bg-color);
+.address .contacts:hover, .address .contacts:focus {
+  color: var(--accent-color);
 }
 
-.address .contacts:hover,
-.address .contacts:focus {
-  color: var(--accent-color);
+.address .street {
+  color: var(--primary-bg-color);
 }
 
 .footer-social {
@@ -631,15 +622,14 @@ p {
   transition: background-color 250ms var(--primary-cubic);
 }
 
+.footer-social .link:hover, .footer-social .link:focus {
+  background-color: var(--accent-color);
+}
+
 .footer-social .icon {
   width: 20px;
   height: 20px;
   fill: var(--primary-bg-color);
-}
-
-.footer-social .link:hover,
-.footer-social .link:focus {
-  background-color: var(--accent-color);
 }
 
 .footer-form {
@@ -704,6 +694,10 @@ p {
   transition: border-color 250ms var(--primary-cubic);
 }
 
+.partners-list .link:hover, .partners-list .link:focus {
+  border-color: var(--accent-color);
+}
+
 .partners-list .item:not(:last-child) {
   margin-right: 30px;
 }
@@ -715,11 +709,6 @@ p {
   transition: fill 250ms var(--primary-cubic);
 }
 
-.partners-list .link:hover,
-.partners-list .link:focus {
-  border-color: var(--accent-color);
-}
-
 .partners-list .link:hover .company-icon,
 .partners-list .link:focus .company-icon {
   fill: var(--accent-color);
@@ -729,6 +718,10 @@ p {
   display: flex;
   margin-bottom: 50px;
   justify-content: center;
+}
+
+.btns-portfolio .item:not(:last-child) {
+  margin-right: 8px;
 }
 
 .button-portfolio {
@@ -746,12 +739,7 @@ p {
   transition: background-color 250ms var(--primary-cubic), color 250ms var(--primary-cubic), box-shadow 250ms var(--primary-cubic);
 }
 
-.btns-portfolio .item:not(:last-child) {
-  margin-right: 8px;
-}
-
-.button-portfolio:hover,
-.button-portfolio:focus {
+.button-portfolio:hover, .button-portfolio:focus {
   background-color: var(--accent-color);
   color: var(--primary-bg-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -774,12 +762,16 @@ p {
   transition: box-shadow 250ms var(--primary-cubic);
 }
 
+.work-examples .link:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .work-examples .overlay-zone {
   position: relative;
   overflow: hidden;
 }
 
-.work-examples .portfolio-overlay {
+.portfolio-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -791,18 +783,14 @@ p {
   background-color: rgba(33, 150, 243, 0.9);
 }
 
+.work-examples .link:hover .portfolio-overlay {
+  transform: translateY(0);
+}
+
 .work-examples .overlay-text {
   font-size: 18px;
   line-height: calc(28 / 18);
   color: var(--primary-bg-color);
-}
-
-.work-examples .link:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-.work-examples .link:hover .portfolio-overlay {
-  transform: translateY(0);
 }
 
 .work-examples .item-title-text {

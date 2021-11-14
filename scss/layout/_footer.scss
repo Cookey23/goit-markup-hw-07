@@ -33,16 +33,16 @@
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   transition: color 250ms var(--primary-cubic);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 
 .address .street {
   color: var(--primary-bg-color);
 }
 
-.address .contacts:hover,
-.address .contacts:focus {
-  color: var(--accent-color);
-}
 .footer-social {
   margin-left: 70px;
 }
@@ -72,16 +72,17 @@
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.1);
   transition: background-color 250ms var(--primary-cubic);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+  }
 }
 .footer-social .icon {
   width: 20px;
   height: 20px;
   fill: var(--primary-bg-color);
 }
-.footer-social .link:hover,
-.footer-social .link:focus {
-  background-color: var(--accent-color);
-}
+
 .footer-form {
   margin-left: auto;
 }

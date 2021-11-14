@@ -6,6 +6,9 @@
 }
 .works-type .item {
   position: relative;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 .works-type .overlay {
   position: absolute;
@@ -27,9 +30,7 @@
   letter-spacing: 0.03em;
   color: var(--primary-bg-color);
 }
-.works-type .item:not(:last-child) {
-  margin-right: 30px;
-}
+
 .works-type .image {
   display: block;
 }

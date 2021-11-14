@@ -2,6 +2,9 @@
   display: flex;
   margin-bottom: 50px;
   justify-content: center;
+  & .item:not(:last-child) {
+    margin-right: 8px;
+  }
 }
 .button-portfolio {
   padding: 6px 22px;
@@ -17,17 +20,14 @@
   color: var(--title-text-color);
   transition: background-color 250ms var(--primary-cubic), color 250ms var(--primary-cubic),
     box-shadow 250ms var(--primary-cubic);
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    color: var(--primary-bg-color);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  }
 }
 
-.btns-portfolio .item:not(:last-child) {
-  margin-right: 8px;
-}
-.button-portfolio:hover,
-.button-portfolio:focus {
-  background-color: var(--accent-color);
-  color: var(--primary-bg-color);
-  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
 .work-examples {
   display: flex;
   flex-wrap: wrap;
@@ -41,13 +41,16 @@
   display: block;
   text-decoration: none;
   transition: box-shadow 250ms var(--primary-cubic);
+  &:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
 }
 .work-examples .overlay-zone {
   position: relative;
   overflow: hidden;
 }
 
-.work-examples .portfolio-overlay {
+.portfolio-overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -57,18 +60,16 @@
   transition: transform 250ms var(--primary-cubic);
   padding: 63px 24px;
   background-color: rgba(33, 150, 243, 0.9);
+  .work-examples .link:hover & {
+    transform: translateY(0);
+  }
 }
 .work-examples .overlay-text {
   font-size: 18px;
   line-height: calc(28 / 18);
   color: var(--primary-bg-color);
 }
-.work-examples .link:hover {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-.work-examples .link:hover .portfolio-overlay {
-  transform: translateY(0);
-}
+
 .work-examples .item-title-text {
   padding: 20px 24px;
   border-bottom: 1px solid #eee;

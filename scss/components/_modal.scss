@@ -29,8 +29,8 @@
   height: 11px;
   fill: #000;
   transition: fill 250ms var(--primary-cubic);
-}
-.btn-close-modal:hover .close-modal-icon,
-.btn-close-modal:focus .close-modal-icon {
-  fill: var(--accent-color);
+  .btn-close-modal:hover &,
+  .btn-close-modal:focus & {
+    fill: var(--accent-color);
+  }
 }

@@ -36,6 +36,10 @@
   letter-spacing: 0.02em;
   color: var(--title-text-color);
   transition: color 250ms var(--primary-cubic);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 .site-nav .link.current::after {
   position: absolute;
@@ -49,14 +53,6 @@
   border-radius: 2px;
 }
 
-.site-nav .link:hover,
-.site-nav .link:focus {
-  color: var(--accent-color);
-}
-.site-nav .link.current {
-  color: var(--accent-color);
-}
-
 .header-contact .contacts {
   display: flex;
   align-items: center;
@@ -68,6 +64,10 @@
   text-decoration: none;
   color: var(--primary-text-color);
   transition: color 250ms var(--primary-cubic);
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
 }
 .header-contact .contact-icon {
   margin-right: 10px;
@@ -77,10 +77,6 @@
   transition: fill 250ms var(--primary-cubic);
 }
 
-.header-contact .contacts:hover,
-.header-contact .contacts:focus {
-  color: var(--accent-color);
-}
 .header-contact .contacts:hover .contact-icon,
 .header-contact .contacts:focus .contact-icon {
   fill: var(--accent-color);
